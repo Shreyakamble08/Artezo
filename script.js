@@ -216,7 +216,7 @@ function updateVariantCardStates(activeAsinId) {
 
 // 7. DEFAULT VARIANT
 function setDefaultVariant() {
-  const def = Object.values(variantCatalog).find(v => v.isDefault);
+  const def = Object.values(variantCatalog).find((v) => v.isDefault);
   if (def) selectVariant(def.id);
 }
 
@@ -231,7 +231,7 @@ function selectVariant(asinId) {
   updateMainImage(variant.mainImage);
   updateThumbnails(variant.thumbnails);
   updateProductDetails(variant);
-  updatePriceDisplay(variant);           // ← key pricing sync
+  updatePriceDisplay(variant); // ← key pricing sync
   updateCustomizeButton(variant.frameCount);
 
   if (isCustomizeModalOpen()) {
@@ -242,22 +242,38 @@ function selectVariant(asinId) {
 // 9. CENTRAL PRICE UPDATE (main page + modal)
 function updatePriceDisplay(variant) {
   // Main buy box
-  const mainPrice    = document.querySelector(".lg\\:w-7\\/12 .text-3xl.font-bold.text-\\[\\#174143\\]");
-  const mainMrp      = document.querySelector(".lg\\:w-7\\/12 .text-sm.line-through.text-gray-400");
-  const mainDiscount = document.querySelector(".lg\\:w-7\\/12 .bg-red-50.text-red-700");
+  const mainPrice = document.querySelector(
+    ".lg\\:w-7\\/12 .text-3xl.font-bold.text-\\[\\#174143\\]",
+  );
+  const mainMrp = document.querySelector(
+    ".lg\\:w-7\\/12 .text-sm.line-through.text-gray-400",
+  );
+  const mainDiscount = document.querySelector(
+    ".lg\\:w-7\\/12 .bg-red-50.text-red-700",
+  );
 
-  if (mainPrice)    mainPrice.textContent    = formatPrice(variant.price);
-  if (mainMrp)      mainMrp.textContent      = formatMrp(variant.mrp);
+  if (mainPrice) mainPrice.textContent = formatPrice(variant.price);
+  if (mainMrp) mainMrp.textContent = formatMrp(variant.mrp);
   if (mainDiscount) mainDiscount.textContent = formatDiscount(variant.discount);
 
   // Modal
-  const modalPrice    = document.querySelector("#customiseModal .text-2xl.font-bold.text-gray-900");
-  const modalMrp      = document.querySelector("#customiseModal .text-base.line-through.text-gray-400");
-  const modalDiscount = document.querySelector("#customiseModal .bg-red-100.text-red-700");
+  const modalPrice = document.querySelector(
+    "#customiseModal .text-2xl.font-bold.text-gray-900",
+  );
+  const modalMrp = document.querySelector(
+    "#customiseModal .text-base.line-through.text-gray-400",
+  );
+  const modalDiscount = document.querySelector(
+    "#customiseModal .bg-red-100.text-red-700",
+  );
 
-  if (modalPrice)    modalPrice.innerHTML    = formatPrice(variant.price) + '<span class="text-base font-normal">.00</span>';
-  if (modalMrp)      modalMrp.textContent    = formatMrp(variant.mrp);
-  if (modalDiscount) modalDiscount.textContent = formatDiscount(variant.discount);
+  if (modalPrice)
+    modalPrice.innerHTML =
+      formatPrice(variant.price) +
+      '<span class="text-base font-normal">.00</span>';
+  if (modalMrp) modalMrp.textContent = formatMrp(variant.mrp);
+  if (modalDiscount)
+    modalDiscount.textContent = formatDiscount(variant.discount);
 }
 
 // 10. MAIN IMAGE
@@ -267,7 +283,9 @@ function updateMainImage(src) {
   if (mainImg) {
     mainImg.src = src;
     mainImg.style.opacity = "0";
-    setTimeout(() => { mainImg.style.opacity = "1"; }, 10);
+    setTimeout(() => {
+      mainImg.style.opacity = "1";
+    }, 10);
   }
   if (zoomed) zoomed.src = src;
   updateMagnifierOnImageChange();
@@ -282,7 +300,7 @@ function updateThumbnails(thumbnails) {
     thumbnails.forEach((src, i) => {
       const img = document.createElement("img");
       img.src = src;
-      img.className = `thumbnail h-20 w-20 object-cover rounded-lg cursor-pointer border ${i===0 ? "border-2 border-orange-500" : "border-gray-300 hover:border-orange-400"}`;
+      img.className = `thumbnail h-20 w-20 object-cover rounded-lg cursor-pointer border ${i === 0 ? "border-2 border-orange-500" : "border-gray-300 hover:border-orange-400"}`;
       img.onclick = () => onThumbnailClick(img, i);
       vert.appendChild(img);
     });
@@ -295,7 +313,7 @@ function updateThumbnails(thumbnails) {
     thumbnails.forEach((src, i) => {
       const img = document.createElement("img");
       img.src = src;
-      img.className = `w-full h-24 object-cover rounded-lg border ${i===0 ? "border-orange-500" : "border-gray-200 hover:border-gray-300"} cursor-pointer`;
+      img.className = `w-full h-24 object-cover rounded-lg border ${i === 0 ? "border-orange-500" : "border-gray-200 hover:border-gray-300"} cursor-pointer`;
       img.onclick = () => onThumbnailClick(img, i);
       grid.appendChild(img);
     });
@@ -310,22 +328,26 @@ function onThumbnailClick(thumb, index) {
 }
 
 function updateThumbnailSelection(activeIndex) {
-  document.querySelectorAll(".thumbnail, .grid.grid-cols-4.gap-2 img").forEach((el, i) => {
-    const isActive = i === activeIndex;
-    if (el.classList.contains("thumbnail")) {
-      el.classList.toggle("border-2", isActive);
-      el.classList.toggle("border-orange-500", isActive);
-      el.classList.toggle("border-gray-300", !isActive);
-    } else {
-      el.classList.toggle("border-orange-500", isActive);
-      el.classList.toggle("border-gray-200", !isActive);
-    }
-  });
+  document
+    .querySelectorAll(".thumbnail, .grid.grid-cols-4.gap-2 img")
+    .forEach((el, i) => {
+      const isActive = i === activeIndex;
+      if (el.classList.contains("thumbnail")) {
+        el.classList.toggle("border-2", isActive);
+        el.classList.toggle("border-orange-500", isActive);
+        el.classList.toggle("border-gray-300", !isActive);
+      } else {
+        el.classList.toggle("border-orange-500", isActive);
+        el.classList.toggle("border-gray-200", !isActive);
+      }
+    });
 }
 
 // 12. PRODUCT DETAILS
 function updateProductDetails(variant) {
-  const cont = document.querySelector(".flex.flex-wrap.gap-4.font-normal.text-sm.text-\\[\\#174143\\]");
+  const cont = document.querySelector(
+    ".flex.flex-wrap.gap-4.font-normal.text-sm.text-\\[\\#174143\\]",
+  );
   if (cont) {
     cont.innerHTML = `
       <span><strong>Customisations:</strong> ${variant.specs.customisations}</span>
@@ -352,8 +374,16 @@ function initQuantitySelector() {
   if (!val || !plus || !minus) return;
 
   let qty = 1;
-  plus.onclick = () => { qty++; val.textContent = qty; };
-  minus.onclick = () => { if (qty > 1) { qty--; val.textContent = qty; } };
+  plus.onclick = () => {
+    qty++;
+    val.textContent = qty;
+  };
+  minus.onclick = () => {
+    if (qty > 1) {
+      qty--;
+      val.textContent = qty;
+    }
+  };
 }
 
 // 15. CUSTOMIZE MODAL
@@ -372,7 +402,7 @@ function openCustomizeModal(frameCount) {
     syncCustomizationSection(frameCount);
     if (activeVariantId) {
       const v = variantCatalog[activeVariantId];
-      if (v) updatePriceDisplay(v);   // ensure modal price is correct
+      if (v) updatePriceDisplay(v); // ensure modal price is correct
     }
   }, 10);
 }
@@ -401,12 +431,20 @@ function updateFramePreviewSlots(count) {
   if (!cont) return;
   cont.innerHTML = "";
 
-  let cols = count <= 2 ? "grid-cols-2" : count <= 4 ? "grid-cols-2" : count <= 6 ? "grid-cols-3" : "grid-cols-4";
+  let cols =
+    count <= 2
+      ? "grid-cols-2"
+      : count <= 4
+        ? "grid-cols-2"
+        : count <= 6
+          ? "grid-cols-3"
+          : "grid-cols-4";
   cont.className = `grid ${cols} gap-4 max-w-md mx-auto`;
 
   for (let i = 1; i <= count; i++) {
     const slot = document.createElement("div");
-    slot.className = "frame-preview-slot relative border-4 border-black aspect-video bg-gray-100";
+    slot.className =
+      "frame-preview-slot relative border-4 border-black aspect-video bg-gray-100";
     slot.innerHTML = `<img id="frameImg-${i}" class="absolute inset-0 w-full h-full object-cover hidden">`;
     cont.appendChild(slot);
   }
@@ -455,7 +493,9 @@ function handleUpload(e, index) {
   reader.readAsDataURL(file);
 }
 
-function replaceImage(index) { document.getElementById(`replace-${index}`).click(); }
+function replaceImage(index) {
+  document.getElementById(`replace-${index}`).click();
+}
 
 function deleteImage(index) {
   const img = document.getElementById(`frameImg-${index}`);
@@ -470,12 +510,14 @@ function deleteImage(index) {
 }
 
 function clearUploadedImages() {
-  document.querySelectorAll('input[type="file"]').forEach(inp => inp.value = "");
-  document.querySelectorAll(".frame-preview-slot img").forEach(img => {
+  document
+    .querySelectorAll('input[type="file"]')
+    .forEach((inp) => (inp.value = ""));
+  document.querySelectorAll(".frame-preview-slot img").forEach((img) => {
     img.classList.add("hidden");
     img.src = "";
   });
-  document.querySelectorAll('[id^="uploadBox-"]').forEach(box => {
+  document.querySelectorAll('[id^="uploadBox-"]').forEach((box) => {
     const idx = box.id.split("-")[1];
     box.innerHTML = `
       <label class="inline-flex items-center gap-2 border px-4 py-2 rounded cursor-pointer">
@@ -487,7 +529,9 @@ function clearUploadedImages() {
 }
 
 function scrollToPreview() {
-  document.getElementById("framePreview")?.scrollIntoView({ behavior: "smooth" });
+  document
+    .getElementById("framePreview")
+    ?.scrollIntoView({ behavior: "smooth" });
 }
 
 // 16. MAGNIFIER (your original code – kept mostly as-is)
@@ -503,8 +547,10 @@ function initMagnifier() {
   if (!document.getElementById("magnifierLens")) {
     const lens = document.createElement("div");
     lens.id = "magnifierLens";
-    lens.className = "absolute hidden w-32 h-32 rounded-full border-2 border-white shadow-lg overflow-hidden pointer-events-none z-20";
-    lens.innerHTML = '<div id="lensPreview" class="w-full h-full bg-no-repeat"></div>';
+    lens.className =
+      "absolute hidden w-32 h-32 rounded-full border-2 border-white shadow-lg overflow-hidden pointer-events-none z-20";
+    lens.innerHTML =
+      '<div id="lensPreview" class="w-full h-full bg-no-repeat"></div>';
     cont.appendChild(lens);
   }
 
@@ -512,8 +558,10 @@ function initMagnifier() {
   if (!document.getElementById("zoomPreviewBox")) {
     const box = document.createElement("div");
     box.id = "zoomPreviewBox";
-    box.className = "absolute left-full ml-4 top-0 w-80 h-80 hidden bg-white border border-gray-300 rounded-lg shadow-xl overflow-hidden z-10";
-    box.innerHTML = '<img id="zoomedImage" src="" class="absolute transform scale-200 origin-top-left">';
+    box.className =
+      "absolute left-full ml-4 top-0 w-80 h-80 hidden bg-white border border-gray-300 rounded-lg shadow-xl overflow-hidden z-10";
+    box.innerHTML =
+      '<img id="zoomedImage" src="" class="absolute transform scale-200 origin-top-left">';
     cont.parentElement.appendChild(box);
   }
 
@@ -521,7 +569,8 @@ function initMagnifier() {
   if (!document.getElementById("toggleZoomBtn")) {
     const btn = document.createElement("button");
     btn.id = "toggleZoomBtn";
-    btn.className = "absolute bottom-3 right-3 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow";
+    btn.className =
+      "absolute bottom-3 right-3 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow";
     btn.innerHTML = '<i class="fas fa-search-plus text-gray-600"></i>';
     btn.onclick = toggleMagnifier;
     cont.appendChild(btn);
@@ -564,7 +613,7 @@ function bindMagnifierToImage(imageElement) {
     lensY = Math.max(0, Math.min(lensY, rect.height - lensSize));
 
     lens.style.left = lensX + "px";
-    lens.style.top  = lensY + "px";
+    lens.style.top = lensY + "px";
 
     const zoom = 2;
     const lensPreview = document.getElementById("lensPreview");
@@ -574,7 +623,7 @@ function bindMagnifierToImage(imageElement) {
 
     zoomed.style.transform = `scale(${zoom})`;
     zoomed.style.left = `-${lensX * zoom}px`;
-    zoomed.style.top  = `-${lensY * zoom}px`;
+    zoomed.style.top = `-${lensY * zoom}px`;
   };
 }
 

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Site Title</title>
+
+    <!-- Add Font Awesome 6 Free CDN here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky top-0 z-50 bg-white shadow">
+
+        <!-- 🔹 TOP NAVBAR -->
+        <div style="background-color:#F5AD18; color:#174143;" class="text-xs">
+            <div class="max-w-7xl mx-auto px-6 py-1 flex items-center justify-between">
+
+                <!-- Left: Contact Info -->
+                <div class="flex items-center gap-4">
+                    <span class="hover:text-white transition cursor-pointer">
+                        📞 +91 98765 43210
+                    </span>
+                    <span class="hover:text-white transition cursor-pointer">
+                        ✉️ info@example.com
+                    </span>
+                </div>
+
+                <!-- Right: Social Icons -->
+                <div class="flex items-center gap-4 text-sm">
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 🔹 MAIN HEADER -->
+        <div class="bg-white">
+            <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Logo" class="h-12 object-contain" />
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="flex items-center gap-6 text-sm font-medium text-[#174143]">
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        Photo Frames
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        Name Plates
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        Home Decor
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        Trophy & Momento
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        LED Sign Board
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group text-[#174143] hover:text-[#F5AD18]">
+                        About Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative text-[#174143] group hover:text-[#F5AD18]">
+                        Contact Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- Right Icons -->
+                <div class="flex items-center gap-6 text-lg text-[#174143]">
+
+                    <!-- Wishlist -->
+                    <a href="#" class="hover:text-[#F5AD18] transition" title="Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+
+                    <!-- Cart -->
+                    <a href="#" class="relative hover:text-[#F5AD18] transition" title="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">2</span>
+                    </a>
+
+                    <!-- Login Dropdown -->
+                    <div class="relative group z-50">
+
+                        <button class="flex items-center gap-1 hover:text-[#F5AD18] transition text-sm">
+                            <i class="fa-regular fa-user"></i>
+                            Login
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div class="absolute right-0 mt-3 w-40 bg-white border rounded-md shadow-lg
+         opacity-0 invisible group-hover:opacity-100 group-hover:visible
+         transition-all duration-200 text-sm z-50">
+
+
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">My Profile</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Orders</a>
+                            <hr>
+                            <a href="#" class="block px-4 py-2 text-red-600 hover:bg-gray-100">Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 🔹 THIRD SLIDER: Continuous Scrolling Offers -->
+        <div style="background-color:#F5AD18; color:#174143;" class="overflow-hidden whitespace-nowrap   leading-none">
+
+            <div class="inline-block animate-marquee py-1 px-4 text-xs font-medium text-outline-white-hairline">
+
+                <!-- First copy -->
+                <span class="mx-4">★ 20% OFF on Photo Frames – FRAME20</span>
+                <span class="mx-4">★ 30% OFF on Name Plates</span>
+                <span class="mx-4">★ Buy 2 Get 1 Free – Home Decor</span>
+                <span class="mx-4">★ 25% OFF on LED Sign Boards</span>
+                <span class="mx-4">★ 35% OFF on Trophies & Momentos</span>
+                <span class="mx-4">★ Free Shipping above ₹999</span>
+
+                <!-- Second copy (for seamless loop) -->
+                <span class="mx-4">★ 20% OFF on Photo Frames – FRAME20</span>
+                <span class="mx-4">★ 30% OFF on Name Plates</span>
+                <span class="mx-4">★ Buy 2 Get 1 Free – Home Decor</span>
+                <span class="mx-4">★ 25% OFF on LED Sign Boards</span>
+                <span class="mx-4">★ 35% OFF on Trophies & Momentos</span>
+                <span class="mx-4">★ Free Shipping above ₹999</span>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-6 flex flex-col lg:flex-row gap-8">
+        <!-- Left Column: Product Preview -->
+        <div class="lg:w-5/12">
+            <div class="bg-white p-4 border border-gray-200 rounded-xl flex gap-4">
+
+                <!-- LEFT: Vertical Thumbnails -->
+                <div class="flex flex-col gap-3">
+                    <img src="images/frame2.jpg"
+                        class="thumbnail h-20 w-20 object-cover rounded-lg cursor-pointer border-2 border-orange-500"
+                        onclick="changeImage(this)">
+                    <img src="images/frame1.jpg"
+                        class="thumbnail h-20 w-20 object-contain rounded-lg cursor-pointer border border-gray-300 hover:border-orange-400"
+                        onclick="changeImage(this)">
+                    <img src="images/frame3.jfif"
+                        class="thumbnail h-20 w-20 object-contain rounded-lg cursor-pointer border border-gray-300 hover:border-orange-400"
+                        onclick="changeImage(this)">
+                    <img src="images/frame4.jfif"
+                        class="thumbnail h-20 w-20 object-cover rounded-lg cursor-pointer border border-gray-300 hover:border-orange-400"
+                        onclick="changeImage(this)">
+                </div>
+
+                <!-- RIGHT: Main Image with Zoom -->
+                <div class="flex-1 relative overflow-hidden rounded-xl">
+                    <!-- Main Image Container -->
+                    <div id="imageContainer" class="relative cursor-crosshair">
+                        <img id="mainImg" src="images/frame2.jpg" alt="Main Product"
+                            class="w-full h-auto object-contain">
+
+                        <!-- Magnifier Lens (Circle) -->
+                        <div id="magnifierLens"
+                            class="absolute hidden w-32 h-32 rounded-full border-2 border-white shadow-lg overflow-hidden pointer-events-none z-20">
+                            <div id="lensPreview" class="w-full h-full bg-no-repeat"></div>
+                        </div>
+                    </div>
+
+                    <!-- Zoom Preview Box (Right Side) -->
+                    <div id="zoomPreviewBox"
+                        class="absolute left-full ml-4 top-0 w-80 h-80 hidden bg-white border border-gray-300 rounded-lg shadow-xl overflow-hidden z-10">
+                        <img id="zoomedImage" src="images/frame2.jpg" alt="Zoomed Preview"
+                            class="absolute transform scale-200 origin-top-left">
+                    </div>
+
+                    <!-- Zoom Toggle Button -->
+                    <div class="absolute bottom-3 right-3">
+                        <button id="toggleZoomBtn"
+                            class="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow">
+                            <i class="fas fa-search-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Right: Details & Buy Box (≈58%) -->
+        <div class="lg:w-7/12 flex flex-col lg:flex-row gap-6">
+
+            <!-- LEFT: Product Info -->
+            <div class="flex-1 space-y-4">
+                <!-- Title -->
+                <h1 class="text-xl lg:text-2xl font-normal font-serif text-[#174143] leading-snug">
+                    Artezo Custom Photo Frame Set
+                    Black <br>• Personalised</h1>
+
+                <!-- Customisations / Brand / Colour -->
+                <div class="flex flex-wrap gap-4 font-normal text-sm text-[#174143]">
+                    <span><strong>Customisations:</strong> 4 images</span>
+                    <span><strong>Brand:</strong> Artezo</span>
+                    <!-- <span><strong>Colour:</strong> 4 Vertical</span> -->
+                    <span><strong>Product Dimensions:</strong> 32L x 24.5W cm</span>
+                    <span><strong>Shape:</strong> Rectangular</span>
+                    <span><strong>Mounting Type:</strong> Wall Mount</span>
+                </div>
+
+                <!-- Variant Cards (ASIN-style selection) -->
+                <div class="pt-4 border-t border-gray-100" id="variantSection">
+                    <p class="text-sm font-medium text-gray-700 mb-3">Select Frame Set:</p>
+                    <div class="flex flex-wrap gap-3" id="variantCardsContainer">
+                        <!-- Variants will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Image Thumbnails -->
+                <!-- <div class="grid grid-cols-4 gap-2">
+                    <img src="images/frame1.jfif" alt="Product Image"
+                        class="w-full h-24 object-contain rounded-lg border border-gray-200">
+                    <img src="images/frame5.jfif" alt="Product Image"
+                        class="w-full h-24 object-cover rounded-lg border border-gray-200">
+                    <img src="images/frame6.jfif" alt="Product Image"
+                        class="w-full h-24 object-cover rounded-lg border border-gray-200">
+                    <img src="images/frame7.jfif" alt="Product Image"
+                        class="w-full h-24 object-cover rounded-lg border border-gray-200">
+                </div> -->
+
+                <!-- Ratings & Brand Badge -->
+                <div class="flex items-center gap-3 text-sm">
+                    <div class="flex text-yellow-400 gap-1">★★★★☆</div>
+                    <a href="#reviews" class="text-blue-600 hover:underline">143 ratings</a>
+                    <span
+                        class="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-medium border border-emerald-200 text-xs">
+                        Top Brand
+                    </span>
+                </div>
+
+                <!-- Delivery & Stock -->
+                <div class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-truck text-emerald-500"></i>
+                        <span><strong>Free delivery</strong> • 9–12 Feb</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-emerald-600">
+                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                        In stock
+                    </div>
+                    <a href="#" class="text-blue-600 hover:underline text-xs flex items-center gap-1">
+                        Delivery details <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Buy Box -->
+            <div class="w-full lg:w-1/3 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+
+                <!-- Price -->
+                <div class="flex flex-col gap-1">
+                    <span class="text-3xl font-bold text-[#174143]">₹864</span>
+                    <span class="text-sm line-through text-gray-400">₹1,999</span>
+                    <span
+                        class="bg-red-50 text-red-700 px-2 py-0.5 rounded-full text-xs font-medium border border-red-100">57%
+                        OFF</span>
+                </div>
+
+                <!-- Coupons / Offers -->
+                <div class="space-y-1.5">
+
+                    <!-- Coupon Applied -->
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-200 rounded-lg px-3 py-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+                        <p class="text-xs text-gray-800">
+                            <span class="font-medium text-green-800">2% OFF</span>
+                            • Code:
+                            <span class="font-semibold text-gray-900">FRAME2</span>
+                        </p>
+                    </div>
+
+                    <!-- Extra Offers -->
+                    <div class="flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-lg px-3 py-1.5">
+                        <span class="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
+                        <p class="text-xs text-gray-800">
+                            <span class="font-medium text-orange-800">Extra savings</span>
+                            • Cashback & EMI
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Quantity Selector -->
+                <div>
+                    <p class="text-sm font-medium text-gray-700 mb-1">Quantity</p>
+
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-fit bg-white">
+
+                        <button type="button" id="qtyMinus"
+                            class="px-3 py-2 hover:bg-gray-100 text-gray-700 transition">
+                            <i class="fas fa-minus"></i>
+                        </button>
+
+                        <span id="qtyValue"
+                            class="px-4 py-2 font-semibold border-x border-gray-300 min-w-[40px] text-center">
+                            1
+                        </span>
+
+                        <button type="button" id="qtyPlus" class="px-3 py-2 hover:bg-gray-100 text-gray-700 transition">
+                            <i class="fas fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Customise modal -->
+                <button onclick="openCustomizeModal(4)"
+                    class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-magic mr-2"></i>
+                    Customise Now
+                </button>
+                <!-- Terms -->
+                <p class="text-xs text-gray-500 text-center">
+                    By clicking "Customise now", you agree to our
+                    <a href="#" class="text-blue-600 hover:underline">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+
+        <!-----------------Customization modal --------------->
+        <div id="customiseModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+
+            <div class="bg-white w-full max-w-5xl h-[82vh] rounded-2xl shadow-xl flex flex-col overflow-hidden">
+
+                <!-- HEADER -->
+                <div class="flex justify-between items-center px-6 py-4 border-b bg-gray-50">
+                    <h2 class="font-semibold text-lg">Customise</h2>
+                    <button onclick="closeCustomizeModal()" class="text-2xl">&times;</button>
+                </div>
+
+                <!-- PRICE ROW -->
+                <div
+                    class="flex justify-between items-center px-6 py-3 border-b bg-gradient-to-r from-teal-50 to-yellow-50">
+                    <!-- Left: Price & Info -->
+                    <div class="space-y-1">
+                        <div class="flex items-baseline gap-2">
+                            <p class="text-2xl font-bold text-gray-900">₹864<span
+                                    class="text-base font-normal">.00</span></p>
+                            <p class="text-base line-through text-gray-400">₹1,999</p>
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs font-medium">
+                                57% OFF
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-2 text-sm text-emerald-700">
+                                <i class="fas fa-truck text-emerald-600"></i>
+                                <span>FREE delivery <strong>Sat, 21 Feb</strong></span>
+                            </div>
+                            <div class="h-4 w-px bg-gray-300"></div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                <span class="text-emerald-700 font-medium">In stock</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust badges -->
+                        <div class="flex gap-3 mt-2">
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full border border-blue-100">
+                                <i class="fas fa-shield-alt mr-1"></i>1 Year Warranty
+                            </span>
+                            <span
+                                class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full border border-green-100">
+                                <i class="fas fa-check-circle mr-1"></i>Easy Returns
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Actions -->
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-2">
+                            <div class="relative">
+                                <select
+                                    class="border border-gray-300 px-3 py-2 rounded-lg bg-white appearance-none pr-8 focus:ring-1 focus:ring-orange-400 text-sm">
+                                    <option>Qty: 1</option>
+                                    <option>Qty: 2</option>
+                                    <option>Qty: 3</option>
+                                </select>
+                                <div
+                                    class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none">
+                                    <i class="fas fa-chevron-down text-xs"></i>
+                                </div>
+                            </div>
+
+                            <button
+                                class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 py-2 rounded-lg font-medium text-sm shadow-sm hover:shadow transition-all duration-200 flex items-center gap-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+
+                        <div class="flex justify-end gap-2">
+                            <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                                <i class="far fa-heart"></i>
+                                <span>Wishlist</span>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-800 text-sm flex items-center gap-1">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Compare</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN -->
+                <div class="flex flex-1 overflow-hidden">
+
+                    <!-- LEFT : FRAME PREVIEW -->
+                    <div class="w-1/2 p-6 border-r">
+                        <div id="framePreview" class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                        </div>
+
+                        <p class="text-xs text-gray-500 mt-6 text-center">
+                            Display is an approximate preview.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT : UPLOADS -->
+                    <div class="w-1/2 flex flex-col overflow-hidden">
+
+                        <!-- Uploads -->
+                        <div class="p-6 overflow-y-auto space-y-4 flex-1" id="uploadContainer">
+                        </div>
+
+                        <!-- ACTION BAR -->
+                        <div class="border-t px-6 py-3 flex justify-between bg-white">
+                            <button onclick="scrollToPreview()" class="text-sm text-blue-600 hover:underline">
+                                Preview
+                            </button>
+
+                            <button
+                                class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-medium">
+                                Save & Continue
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Below Fold -->
+    <section class="max-w-7xl mx-auto px-6 py-10 border-t space-y-14">
+
+        <!-- ABOUT THIS ITEM -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <!-- Text -->
+            <div>
+                <h2 class="text-xl font-bold mb-4">About this item</h2>
+
+                <!-- Added paragraph -->
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Create timeless memories with our premium customised photo frame sets. Choose your preferred layout,
+                    upload your favourite photos, and receive high-quality prints that bring your moments to life.
+                    Perfect for personalising your living space or gifting to loved ones on special occasions.
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2 text-gray-800">
+                    <li>Customised collage photo frames with multiple size and layout options</li>
+                    <li>High-quality prints with accurate colors crafted by skilled designers</li>
+                    <li>Ideal for gifting on birthdays, anniversaries, weddings, and special moments</li>
+                    <li>Easy photo upload to create personalized wall décor</li>
+                    <li>Premium photo collage frames suitable for modern interiors</li>
+                </ul>
+            </div>
+
+            <!-- Image -->
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <!-- Outer light-colored border space (thick frame-like gap) -->
+                    <div
+                        class="p-6 bg-[#E4EFE7] rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.15),inset_0_-6px_16px_rgba(0,0,0,0.08)] border border-[#d1e0e5] transition-all duration-300 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.2)] group-hover:scale-[1.02]">
+
+                        <!-- Inner 3D container with white frame (unchanged) -->
+                        <div
+                            class="border-8 border-white rounded-xl overflow-hidden bg-white shadow-[inset_0_4px_12px_rgba(0,0,0,0.25),0_8px_20px_rgba(0,0,0,0.25)]">
+                            <img src="images/about.jfif" alt="Photo Frame Example"
+                                class="w-[320px] h-[240px] object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT DETAILS -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <!-- Image -->
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <!-- Outer light-colored border space (thick frame-like gap) -->
+                    <div
+                        class="p-6 bg-[#E4EFE7] rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.15),inset_0_-6px_16px_rgba(0,0,0,0.08)] border border-[#d1e0e5] transition-all duration-300 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.2)] group-hover:scale-[1.02]">
+
+                        <!-- Inner 3D container with white frame (unchanged) -->
+                        <div
+                            class="border-8 border-white rounded-xl overflow-hidden bg-white shadow-[inset_0_4px_12px_rgba(0,0,0,0.25),0_8px_20px_rgba(0,0,0,0.25)]">
+                            <img src="images/product.jfif" alt="Photo Frame Example"
+                                class="w-[320px] h-[240px] object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tables -->
+            <div>
+                <h2 class="text-xl font-bold mb-4">Product details</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <!-- TABLE 1 -->
+                    <div class="overflow-hidden rounded-xl border border-gray-200">
+                        <table class="w-full text-xs border-collapse">
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <th
+                                        class="w-1/3 px-3 py-2 text-left font-medium border-r border-gray-200 bg-[#174143/50]">
+                                        Brand
+                                    </th>
+                                    <td class="px-3 py-2">Artezo</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Frame Set
+                                    </th>
+                                    <td class="px-3 py-2">4 Vertical Square Frames</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Mounting
+                                    </th>
+                                    <td class="px-3 py-2">Wall Mount</td>
+                                </tr>
+                                <tr>
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Orientation
+                                    </th>
+                                    <td class="px-3 py-2">Vertical</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- TABLE 2 -->
+                    <div class="overflow-hidden rounded-xl border border-gray-200">
+                        <table class="w-full text-xs border-collapse">
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <th
+                                        class="w-1/3 px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Material
+                                    </th>
+                                    <td class="px-3 py-2">Engineered Wood</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Finish
+                                    </th>
+                                    <td class="px-3 py-2">Polished / Poster</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Frame Sizes
+                                    </th>
+                                    <td class="px-3 py-2">10×13, 10×10 in</td>
+                                </tr>
+                                <tr>
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Weight
+                                    </th>
+                                    <td class="px-3 py-2">750 g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- TABLE 3 (FULL WIDTH) -->
+                    <div class="md:col-span-2 overflow-hidden rounded-xl border border-gray-200">
+                        <table class="w-full text-xs border-collapse">
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <th
+                                        class="w-1/6 px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Occasions
+                                    </th>
+                                    <td class="px-3 py-2">
+                                        Birthday, Anniversary, Wedding, New Baby
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Features
+                                    </th>
+                                    <td class="px-3 py-2">
+                                        Lightweight, Water Resistant
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="px-3 py-2 text-left font-medium border-r border-gray-200 bg-gray-50">
+                                        Origin
+                                    </th>
+                                    <td class="px-3 py-2">India</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Artezo Footer -->
+    <footer class="bg-[#174143] text-white/90">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+
+                <!-- Logo + Tagline -->
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <img src="logo.png" alt="Artezo" class="h-10 mb-4">
+                    <p class="text-sm text-white/70 leading-relaxed">
+                        Concept · Craft · Creation
+                    </p>
+                    <p class="mt-3 text-xs text-white/60">
+                        Premium custom photo frames & wall décor crafted with love in India.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-[#F5AD18] mb-5 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Photo Frames</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Name Plates</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Home Decor</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Trophies & Momentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-sm font-semibold text-[#F5AD18] mb-5 uppercase tracking-wider">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Why Artezo?</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-sm font-semibold text-[#F5AD18] mb-5 uppercase tracking-wider">Support</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Track Order</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Returns & Refunds</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">FAQs</a></li>
+                        <li><a href="#" class="hover:text-[#F5AD18] transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="text-sm font-semibold text-[#F5AD18] mb-5 uppercase tracking-wider">Get in Touch</h3>
+
+                    <div class="space-y-3 text-sm">
+                        <p>📍 Ahilyanagar, Maharashtra, India</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>✉️ hello@artezo.in</p>
+                    </div>
+
+                    <div class="mt-6 flex gap-4">
+                        <a href="#" class="text-white/80 hover:text-[#F5AD18] transition text-xl"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-white/80 hover:text-[#F5AD18] transition text-xl"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-white/80 hover:text-[#F5AD18] transition text-xl"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="text-white/80 hover:text-[#F5AD18] transition text-xl"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 py-5 text-center text-sm text-white/60">
+                © 2026 Artezo · Craft · Creation. All rights reserved. Develop by kunashmedia.
+                <span class="mx-3">|</span>
+                <a href="#" class="hover:text-[#F5AD18] transition">Privacy Policy</a>
+                <span class="mx-3">|</span>
+                <a href="#" class="hover:text-[#F5AD18] transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

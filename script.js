@@ -258,7 +258,7 @@ function updatePriceDisplay(variant) {
 
   // Modal
   const modalPrice = document.querySelector(
-    "#customiseModal .text-2xl.font-bold.text-gray-900",
+    "#customiseModal .text-2xl.font-bold.text-gray-900.",
   );
   const modalMrp = document.querySelector(
     "#customiseModal .text-base.line-through.text-gray-400",
